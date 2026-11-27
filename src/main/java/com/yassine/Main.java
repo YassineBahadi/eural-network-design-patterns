@@ -1,6 +1,7 @@
 package com.yassine;
 
 import com.yassine.neuralnetwork.Connection;
+import com.yassine.neuralnetwork.NeuralNetwork;
 import com.yassine.neuralnetwork.Neuron;
 import com.yassine.neuralnetwork.activation.*;
 
@@ -38,5 +39,23 @@ public class Main {
 
         System.out.println("Adapter: " +
                 neuron.calculate(new double[]{2.0}));
+
+        NeuralNetwork network = new NeuralNetwork();
+
+        System.out.println(network.getState());
+
+// Construction -> Training -> Trained
+        network.train();
+
+        System.out.println(network.getState());
+
+// Prédiction autorisée
+        double[] result = network.predict(new double[]{1, 2, 3});
+
+// Construction -> Trained avec fit()
+        NeuralNetwork network2 = new NeuralNetwork();
+        network2.fit();
+
+        System.out.println(network2.getState());
     }
 }

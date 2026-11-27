@@ -32,3 +32,8 @@ using Java and Design Patterns.
 # Adapter
 <img src="screens/4.png">
 <img src="screens/5.png">
+
+# State 
+<img src="screens/8.png">
+<img src="screens/6.png">
+<img src="screens/7.png">
