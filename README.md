@@ -28,3 +28,7 @@ using Java and Design Patterns.
 
 <img src="screens/2.png">
 <img src="screens/3.png">
+
+# Adapter
+<img src="screens/4.png">
+<img src="screens/5.png">
