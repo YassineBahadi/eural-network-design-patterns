@@ -4,6 +4,7 @@ import com.yassine.neuralnetwork.Connection;
 import com.yassine.neuralnetwork.NeuralNetwork;
 import com.yassine.neuralnetwork.Neuron;
 import com.yassine.neuralnetwork.activation.*;
+import com.yassine.neuralnetwork.observer.Dashboard;
 
 /**
  * @author pc
@@ -57,5 +58,13 @@ public class Main {
         network2.fit();
 
         System.out.println(network2.getState());
+
+        NeuralNetwork network3 = new NeuralNetwork();
+
+        Dashboard dashboard = new Dashboard();
+
+        network3.addObserver(dashboard);
+
+        network3.train();
     }
 }

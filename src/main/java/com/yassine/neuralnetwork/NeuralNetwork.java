@@ -1,5 +1,6 @@
 package com.yassine.neuralnetwork;
 
+import com.yassine.neuralnetwork.observer.NetworkObserver;
 import com.yassine.neuralnetwork.state.ConstructionState;
 import com.yassine.neuralnetwork.state.NetworkState;
 import com.yassine.neuralnetwork.state.TrainedState;
@@ -17,6 +18,8 @@ public class NeuralNetwork {
 
     private NetworkState state = new ConstructionState();
 
+    private List<NetworkObserver> observers = new ArrayList<>();
+
     public void addLayer(Layer layer) {
         layers.add(layer);
     }
@@ -27,6 +30,7 @@ public class NeuralNetwork {
 
     public void setState(NetworkState state) {
         this.state = state;
+        notifyObservers();
     }
 
     public String getState() {
@@ -65,4 +69,19 @@ public class NeuralNetwork {
 
         return current;
     }
+
+    public void addObserver(NetworkObserver observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(NetworkObserver observer) {
+        observers.remove(observer);
+    }
+
+    private void notifyObservers() {
+        for (NetworkObserver observer : observers) {
+            observer.update(getState());
+        }
+    }
+
 }
