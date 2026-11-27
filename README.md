@@ -47,3 +47,7 @@ using Java and Design Patterns.
 
 # AOP logging and security aspects
 <img src="screens/12.png">
+
+# Test
+<img src="screens/14.png">
+<img src="screens/13.png">
