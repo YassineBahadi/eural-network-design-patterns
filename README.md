@@ -17,3 +17,14 @@ using Java and Design Patterns.
 - Maven
 - JUnit
 - AspectJ
+
+
+# based architecture 
+
+<img src="screens/1.png">
+
+
+# Strategy
+
+<img src="screens/2.png">
+<img src="screens/3.png">
