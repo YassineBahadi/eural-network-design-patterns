@@ -51,3 +51,6 @@ using Java and Design Patterns.
 # Test
 <img src="screens/14.png">
 <img src="screens/13.png">
+
+# Class Diagram
+<img src="screens/15.png">
