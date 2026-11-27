@@ -1,9 +1,12 @@
 package com.yassine;
 
 import com.yassine.neuralnetwork.Connection;
+import com.yassine.neuralnetwork.Layer;
 import com.yassine.neuralnetwork.NeuralNetwork;
 import com.yassine.neuralnetwork.Neuron;
 import com.yassine.neuralnetwork.activation.*;
+import com.yassine.neuralnetwork.decorator.LoggingDecorator;
+import com.yassine.neuralnetwork.decorator.NormalizationDecorator;
 import com.yassine.neuralnetwork.observer.Dashboard;
 
 /**
@@ -66,5 +69,19 @@ public class Main {
         network3.addObserver(dashboard);
 
         network3.train();
+
+        Layer layer = new Layer();
+
+        layer.addNeuron(new Neuron(0, new Identity()));
+        layer.addNeuron(new Neuron(0, new Identity()));
+
+        Layer decoratedLayer =
+                new LoggingDecorator(
+                        new NormalizationDecorator(layer)
+                );
+
+        double[] result1 = decoratedLayer.process(new double[]{2, 4});
+
+        System.out.println(java.util.Arrays.toString(result1));
     }
 }

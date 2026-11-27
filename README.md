@@ -37,3 +37,10 @@ using Java and Design Patterns.
 <img src="screens/8.png">
 <img src="screens/6.png">
 <img src="screens/7.png">
+
+# Observer
+<img src="screens/9.png">
+<img src="screens/10.png">
+
+# Decorator
+<img src="screens/11.png">

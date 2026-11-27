@@ -16,4 +16,14 @@ public class Layer {
     public List<Neuron> getNeurons() {
         return neurons;
     }
+
+    public double[] process(double[] inputs) {
+        double[] outputs = new double[neurons.size()];
+
+        for (int i = 0; i < neurons.size(); i++) {
+            outputs[i] = neurons.get(i).calculate(inputs);
+        }
+
+        return outputs;
+    }
 }
