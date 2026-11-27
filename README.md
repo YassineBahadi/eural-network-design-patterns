@@ -44,3 +44,6 @@ using Java and Design Patterns.
 
 # Decorator
 <img src="screens/11.png">
+
+# AOP logging and security aspects
+<img src="screens/12.png">
